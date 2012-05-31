@@ -10,7 +10,8 @@
     ],
     "modules": ["amdefine.js"],
     "dependencies": {
-        "modules": ">=0.0.8"
+        "modules": ">=0.0.8",
+        "path" : null
     },
     "description": "AMD support for kanso and couchdb"
 
