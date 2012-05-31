@@ -115,6 +115,7 @@ exports.normalize = function (path, keepBlanks) {
  */
 
 exports.dirname = function (path) {
+    if (!path) return;
     if (path.length > 1 && '/' === path[path.length - 1]) {
         path = path.replace(/\/+$/, '');
     }

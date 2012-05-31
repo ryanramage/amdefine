@@ -67,7 +67,8 @@ function stringRequire(module, require, id) {
         } else if (id === 'module') {
             return module;
         } else {
-            return require(id);
+            var n = path.join(path.dirname(module.id), id );
+            return require(n);
         }
     } else {
         //There is a plugin in play.
@@ -137,13 +138,10 @@ makeRequire = function (module, require) {
  * @returns {Function} a define function that is usable for the current node
  * module.
  */
-function amdefine(module, require) {
+function amdefine(module) {
     var alreadyCalled = false;
 
-    //Favor explicit value, passed in if the module wants to support Node 0.4.
-    require = require || function req() {
-        return module.require.apply(module, arguments);
-    };
+
 
     //Create a define function specific to the module asking for amdefine.
     function define() {
