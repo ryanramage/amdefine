@@ -1,0 +1,17 @@
+{
+    "name": "amdefine",
+    "version": "0.0.1",
+    "categories": ["utils"],
+    "maintainers": [
+        {
+            "name": "Ryan Ramage",
+            "url": "http://github.com/ryanramage"
+        }
+    ],
+    "modules": ["amdefine.js"],
+    "dependencies": {
+        "modules": ">=0.0.8"
+    },
+    "description": "AMD support for kanso and couchdb"
+
+}
